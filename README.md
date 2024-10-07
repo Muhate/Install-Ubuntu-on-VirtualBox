@@ -38,83 +38,112 @@ Before starting the machine, choose the NAT Network created <a href="https://git
 <img width="520" alt="VM creation on VirtualBox" src="https://github.com/user-attachments/assets/0d59c54d-125a-41db-bff1-36347506704d">
 </p>
 
+   - **4.2. Configure the VM**
 
-### 5. Installation Steps
-   - **5.1. Setting Up VirtualBox**
+After starting the VM, let's configure it. When you're prompted with the screen below, choose ***Try or Install Ubuntu Server**. If nothing is happening, try to click any place inside the black screen.
 
-For setting up VirtualBox, refer to <a href="https://github.com/Muhate/Setting-Up-VirtualBox">this guide</a>
-<br>
-<br>
-   
-   - **5.2: Setting Up Windows 2022 on VirtualBox**
+<p align="center">
+<img width="520" alt="Start the installation" src="https://github.com/user-attachments/assets/42348668-1753-4918-ac4e-e9cf912b0787">
+</p>
 
-For setting up Windows 2022 on VirtualBox, refer to <a href="https://github.com/Muhate/Install-Windows-on-VirtualBox">this guide</a>
-<br>
-<br>
+Choose the language for the installation process and hit "ENTER"
 
-   - **5.3: Setting Up Ubuntu Server 24.04.LTS on VirtualBox**
+<p align="center">
+<img width="520" alt="Language Selection" src="https://github.com/user-attachments/assets/a561141c-c2fb-4a83-a1c6-fbdbe730a715">
+</p>
 
-For setting up Ubuntu Server on VirtualBox, refer to <a href="https://github.com/Muhate/Install-Ubuntu-on-VirtualBox">this guide</a>
-<br>
-<br>
+Select the keyboard of your preference or that you are using, select **"Done"** and hit **"ENTER"**.
 
-   - **5.3: Setting Up Wazuh Manager on Ubuntu Server 24.04 LTS**
+<p align="center">
+<img width="520" alt="Language Selection" src="https://github.com/user-attachments/assets/471f2b49-f3af-485b-ad74-1c74f01bb509">
+</p>
 
-     - Update the package manager:
-       ```
-       sudo apt update && sudo apt upgrade -y && sudo reboot
-       ```
-     - Install Wazuh Manager:
-       ```
-       curl -s https://packages.wazuh.com/4.x/ubuntu/KEY.gpg | sudo apt-key add -
-       echo "deb http://packages.wazuh.com/4.x/ubuntu/ focal main" | sudo tee /etc/apt/sources.list.d/wazuh.list
-       sudo apt-get update
-       sudo apt-get install wazuh-manager
-       ```
+Choose the type of installation, in this lab we choose **"Ubuntu Server"**, select **"Done"** and hit **"ENTER"**.
 
-   - **Step 3: Configuring Wazuh**
-     - Modify the configuration file (`/var/ossec/etc/ossec.conf`) to set up agents and alerts.
-     - Restart Wazuh Manager:
-       ```bash
-       sudo systemctl restart wazuh-manager
-       ```
+<p align="center">
+<img width="520" alt="Installation Selection" src="https://github.com/user-attachments/assets/99ea9b69-118f-47af-9a83-d4613dad51db">
+</p>
 
-   - **Step 4: Installing Elasticsearch and Kibana**
-     - Follow similar steps to install and configure Elasticsearch and Kibana.
+Configure the network, select **"Done"** and hit **"ENTER"**. You can skip this step or let it be configured dynamically. Here it was configured manually.
 
-### 5. **Generating Test Data**
-   - **Kali Linux Testing**: 
-     - Execute various tests to generate logs (e.g., using Metasploit, Nmap).
-     - Sample command to generate logs:
-       ```bash
-       nmap -sS -p 1-65535 <target_ip>
-       ```
+<p align="center">
+<img width="520" alt="Network configuration" src="https://github.com/user-attachments/assets/fc4a8ba8-29df-4f17-965b-c06d0bd4335b">
+</p>
 
-### 6. **Results and Analysis**
-   - **Data Visualization**: 
-     - Showcase screenshots of dashboards in Kibana that display security events, logs, and alerts.
-   - **Alerts Configuration**:
-     - Explain how alerts were configured in Wazuh and provide examples of alerts generated during testing.
+No proxy is required, so just select **"Done"** and hit **"ENTER"**.
 
-### 7. **Challenges and Solutions**
-   - **Challenge**: Difficulty in integrating Wazuh with Elastic Stack.
-     - **Solution**: Consulted official documentation and community forums, which helped resolve configuration issues.
+<p align="center">
+<img width="520" alt="Proxy configuration" src="https://github.com/user-attachments/assets/33d5c4c2-be08-4e6d-b5b8-4cc249d2b17e">
+</p>
 
-### 8. **Lessons Learned**
-   - Gained hands-on experience in setting up a complete SIEM solution.
-   - Improved understanding of log analysis and incident response workflows.
+Nothing to change, keep the default Ubuntu mirror, select **"Done"** and hit **"ENTER"**.
 
-### 9. **Future Improvements**
-   - Plan to integrate additional data sources (e.g., firewalls, web servers).
-   - Explore automated incident response mechanisms using Wazuh.
+<p align="center">
+<img width="520" alt="Mirror configuration" src="https://github.com/user-attachments/assets/fe1d235d-d369-44c1-b2fd-b4c0baa117a6">
+</p>
 
-### 10. **Conclusion**
-   - This project successfully demonstrated the deployment of Wazuh in a lab environment, providing valuable insights into security monitoring and log analysis.
+Select **"Continue"** and hit **"ENTER"**.
 
-### 11. **Links and References**
-   - [GitHub Repository](https://github.com/username/wazuh-lab)
-   - [Wazuh Official Documentation](https://wazuh.com/documentation/)
-   - [Elastic Stack Documentation](https://www.elastic.co/guide/en/elastic-stack/current/index.html)
+<p align="center">
+<img width="520" alt="Mirror check" src="https://github.com/user-attachments/assets/0c569dbe-6f0c-4b3f-884c-32e39c79068c">
+</p>
+
+The default configurations for the storage are fine, just select **"Done"** and hit **"ENTER"**.
+
+<p align="center">
+<img width="520" alt="Storage configuration" src="https://github.com/user-attachments/assets/9d9ce1e3-579f-4629-9832-585d100170f3">
+</p>
+
+Review the storage configurations, if they are good select **"Done"** and hit **"ENTER"**.
+
+<p align="center">
+<img width="520" alt="Storage configuration review" src="https://github.com/user-attachments/assets/59d9f252-8ba4-44cf-bd55-aef1b7f004a4">
+</p>
+
+Read the warning and if you are confortable with the storage configurations, just select **"Continue"** and hit **"ENTER"**.
+
+<p align="center">
+<img width="520" alt="Storage configuration warning" src="https://github.com/user-attachments/assets/a6aa04db-b0d5-4ba7-a5d6-8f5e9b2a6e80">
+</p>
+
+Configure your profile accordingly, select **"Done"** and hit **"ENTER"**.
+
+<p align="center">
+<img width="520" alt="Profile configuration" src="https://github.com/user-attachments/assets/90fa6dac-64df-45e3-ac08-fec0b46e10b7">
+</p>
+
+Skip the Ubuntu Pro installation, select **"Continue"** and hit **"ENTER"**.
+
+<p align="center">
+<img width="520" alt="Ubuntu Pro" src="https://github.com/user-attachments/assets/94fd94c2-44a2-4099-bba9-06281fc41aea">
+</p>
+
+Select to install OpenSSH Server, select **"Done"** and hit **"ENTER"**.
+
+<p align="center">
+<img width="520" alt="Ubuntu Pro" src="https://github.com/user-attachments/assets/1d17e548-a47e-46a6-8a74-afe5c74f6391">
+</p>
+
+In the Featured server snaps, just hit **"tab"** to select **"Done"** and hit **"ENTER"**.
+
+<p align="center">
+<img width="520" alt="Featured server snaps" src="https://github.com/user-attachments/assets/ae39f29f-94fc-4c23-905d-44ac27b42a15">
+</p>
+
+Let the installation occur and when finished, select **"Reboot now"** and hit **"ENTER"**.
+
+<p align="center">
+<img width="520" alt="Installation complete" src="https://github.com/user-attachments/assets/a15abeef-8f2c-454c-9f75-b1c4ae6473d5">
+</p>
+
+When prompted with the screen below, just hit **"ENTER"**.
+
+<p align="center">
+<img width="520" alt="enter to reboot" src="https://github.com/user-attachments/assets/023b529e-592d-4104-9ee9-ae3347916b9d">
+</p>
+
+### 5. **Conclusion**
+   - This project successfully demonstrated the creation of a VM on VirtualBox with Ubuntu 24.04 Server operating system.
 
 ### 12. **Contact Information**
    - **Name**: Rogério Muhate
