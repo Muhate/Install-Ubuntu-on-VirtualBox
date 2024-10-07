@@ -145,7 +145,7 @@ When prompted with the screen below, just hit **"ENTER"**.
 ### 5. **Conclusion**
    - This project successfully demonstrated the creation of a VM on VirtualBox with Ubuntu 24.04 Server operating system.
 
-### 12. **Contact Information**
+### 6. **Contact Information**
    - **Name**: Rogério Muhate
    - **Email**: rbmuhate@gmail.com
    - **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/rmuhate)
