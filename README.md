@@ -30,6 +30,15 @@ Open VirtualBox, then click Machine => New, then folow the steps indicated in th
 <img width="520" alt="VM creation on VirtualBox" src="https://github.com/user-attachments/assets/c117c240-884e-4d46-82c9-d95eeee406e6">
 </p>
 
+   - **4.2. Connect the VM to the correct interface**
+
+Before starting the machine, choose the NAT Network created <a href="https://github.com/Muhate/Setting-Up-VirtualBox/blob/main/README.md">here</a>. For that, just folow the steps indicated in the image below. By the end start the machine.
+
+<p align="center">
+<img width="520" alt="VM creation on VirtualBox" src="https://github.com/user-attachments/assets/0d59c54d-125a-41db-bff1-36347506704d">
+</p>
+
+
 ### 5. Installation Steps
    - **5.1. Setting Up VirtualBox**
 
